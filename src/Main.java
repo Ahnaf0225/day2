@@ -33,15 +33,15 @@ public class Main {
 
     public static boolean isValidProductID(long productID) {
 
-        String s = "" + productID;
+        String pID = "" + productID;
 
-        if (s.length() % 2 == 1) {
+        if (pID.length() % 2 == 1) {
             return false;
         }
 
-        int half = s.length() / 2;
-        String first = s.substring(0, half);
-        String second = s.substring(half);
+        int half = pID.length() / 2;
+        String first = pID.substring(0, half);
+        String second = pID.substring(half);
 
         if (first.equals(second)) {
             return true;
